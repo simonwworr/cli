@@ -17,6 +17,8 @@ import (
 func main() {
 	if err := cmd.Execute(); err != nil {
 		fmt.Fprintf(os.Stderr, "Error: %v\n", err)
+		// Use exit code 2 for usage errors vs 1 for general errors;
+		// keeping it simple here with a single non-zero code for now.
 		os.Exit(1)
 	}
 }
