@@ -19,6 +19,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error: %v\n", err)
 		// Use exit code 2 for usage errors vs 1 for general errors;
 		// keeping it simple here with a single non-zero code for now.
+		// TODO: differentiate exit codes once cmd package exposes error types.
 		os.Exit(1)
 	}
 }
