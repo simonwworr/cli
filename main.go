@@ -24,6 +24,9 @@ func main() {
 		// NOTE (personal): upstream uses os.Exit(1) here too — filed an issue
 		// suggesting they expose a typed ExitError so callers can distinguish
 		// usage errors (2) from runtime errors (1). Tracking in FORK_NOTES.md.
+		//
+		// UPDATE: checked upstream issue tracker — looks like they're planning
+		// to add ExitError in v0.5.0. Will revisit this TODO then.
 		os.Exit(1)
 	}
 }
