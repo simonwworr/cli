@@ -27,6 +27,10 @@ func main() {
 		//
 		// UPDATE: checked upstream issue tracker — looks like they're planning
 		// to add ExitError in v0.5.0. Will revisit this TODO then.
+		//
+		// PERSONAL: also printing to stderr with a newline separator for
+		// readability when chaining commands in scripts.
+		fmt.Fprintln(os.Stderr)
 		os.Exit(1)
 	}
 }
